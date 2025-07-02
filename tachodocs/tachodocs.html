@@ -39,20 +39,36 @@
   </script>
 </head>
 <body class="bg-white text-gray-800">
-  <header class="bg-white py-6 shadow-md border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-      <!-- Left: TachoDocs Logo -->
-      <div class="flex items-center gap-4">
-        <img src="images/tachodocs_logo_2025.svg" alt="TachoDocs Logo" class="h-12">
-      </div>
+<header class="bg-white py-6 shadow-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    
+    <!-- Logo and Title: stacked on mobile, side-by-side on desktop -->
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+      <img src="images/tachodocs_logo_2025.svg" alt="TachoDocs Logo" class="h-12 w-auto mx-auto sm:mx-0">
+      
     </div>
-  </header>
+
+    <!-- Go Back Button -->
+    <button
+      type="button"
+      onclick="history.back()"
+      class="inline-flex items-center px-4 py-2 bg-[#08428c] text-white text-sm font-medium rounded-lg shadow hover:bg-[#073575] focus:outline-none focus:ring-2 focus:ring-[#08428c]"
+    >
+      <!-- Heroicon: Arrow Left -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Назад
+    </button>
+  </div>
+</header>
+
 
   <main class="max-w-7xl mx-auto px-6 py-16 space-y-20">
     <!-- Tile 1 -->
     <section class="grid md:grid-cols-3 gap-6 items-center">
       <div>
-        <h2 class="text-2xl font-semibold mb-4 pl-4">Информация</h2>
+        <h2 class="text-2xl font-semibold mb-4 pl-4">Техници</h2>
         <div class="info-tile p-6 rounded-xl space-y-4">
           <div class="space-y-2">
             <a href="workshop_docs/#dtco4.1" class="flex justify-between items-center border-b border-gray-300 pb-2 cursor-pointer">
@@ -181,7 +197,7 @@
 
   </main>
 
-  <footer class="text-center text-gray-500 text-sm py-10">
+<footer class="text-center text-gray-500 text-sm py-10">
     © 2025 TachoDocs. All rights reserved.
   </footer>
 </body>
