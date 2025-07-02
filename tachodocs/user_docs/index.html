@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TachoDocs – Сервизна информация</title>
+    <link rel="canonical" href="https://example.com/technical_docs/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .doc-card:hover {
+        transform: translateY(-4px);
+        transition: 0.2s;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-800">
+   <header class="bg-white py-6 shadow-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    
+    <!-- Logo and Title: stacked on mobile, side-by-side on desktop -->
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+      <img src="../images/tachodocs_logo_2025.svg" alt="TachoDocs Logo" class="h-12 w-auto mx-auto sm:mx-0">
+      <span class="text-center sm:text-left text-xl sm:text-2xl font-semibold text-sky-900">
+    Потребителска документация
+</span>
+    </div>
+
+    <!-- Go Back Button -->
+    <button
+      type="button"
+      onclick="history.back()"
+      class="inline-flex items-center px-4 py-2 bg-[#08428c] text-white text-sm font-medium rounded-lg shadow hover:bg-[#073575] focus:outline-none focus:ring-2 focus:ring-[#08428c]"
+    >
+      <!-- Heroicon: Arrow Left -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Назад
+    </button>
+  </div>
+</header>
+
+
+
+
+
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <input
+        id="doc-search"
+        type="text"
+        placeholder="Търси документи…"
+        class="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#08428c] focus:outline-none"
+      />
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-10">
+      <!-- Section: DTCO 4.1a -->
+      <section id="dtco41" class="mb-16">
+        <h2 class="text-3xl font-semibold text-sky-800 mb-6">DTCO 4.1/4.1a/4.1b</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords="DTCO 4.1, DTCO 4.1a, DTCO 4.1b, test"
+          >
+            <h3 class="text-lg font-semibold">DTCO 4.1b - Ръководство</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2025</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco41/dtco_41b.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco41/dtco_41b.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords="DTCO 4.1, DTCO 4.1a, DTCO 4.1b"
+          >
+            <h3 class="text-lg font-semibold">DTCO 4.1 - кратко упътване</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2025</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco41/qg_dtco_41.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco41/qg_dtco_41.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Други тахографи -->
+      <section id="tachographs" class="mb-16">
+        <h2 class="text-3xl font-semibold text-sky-800 mb-6">Други тахографи</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">DTCO 4.0 - Ръководство</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2025</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco/dtco_40.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco/dtco_40.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">DTCO 4.0 - Кратко упътване</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2025</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco/qg_dtco_40.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco/qg_dtco_40.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">DTCO 4.0e - Ръководство</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2025</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco/dtco_40e.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco/dtco_40e.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">DTCO 4.0e - Кратко упътване</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2025</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco/qg_dtco_40e.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco/qg_dtco_40e.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">DTCO 3.0 - Ръководство</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2023</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco/dtco_30.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco/dtco_30.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">DTCO 2.2 - Ръководство</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2023</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco/dtco_22.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco/dtco_22.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">DTCO 2.1 - Ръководство</h3>
+            <p class="text-sm text-gray-600">PDF файл, версия 2023</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/dtco/dtco_21.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/dtco/dtco_21.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: VDO Fleet -->
+      <section id="vdo-fleet" class="mb-16">
+        <h2 class="text-3xl font-semibold text-sky-800 mb-6">VDO Fleet</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">VDO Fleet - Техническо описание</h3>
+            <p class="text-sm text-gray-600">PDF файл, актуализация: 2024</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/vdo_fleet.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/vdo_fleet.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: VDO Link -->
+      <section id="vdo-link" class="mb-16">
+        <h2 class="text-3xl font-semibold text-sky-800 mb-6">VDO Link</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">Техническо описание</h3>
+            <p class="text-sm text-gray-600">PDF файл, актуализация: 2024</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/vdo_link.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/vdo_link.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Пакет "Мобилност" 1 -->
+      <section id="mobility-package-1" class="mb-16">
+        <h2 class="text-3xl font-semibold text-sky-800 mb-6">Пакет "Мобилност" 1</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">Пакет "Мобилност" 1 - Ръководство Tachos Ltd.</h3>
+            <p class="text-sm text-gray-600">PDF файл, актуализация: 2024</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/mp_user_tachos.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/mp_user_tachos.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">Пакет "Мобилност" 1 - Ръководство VDO</h3>
+            <p class="text-sm text-gray-600">PDF файл, актуализация: 2024</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/mp_user.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/mp_user.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow p-5 doc-card flex flex-col space-y-2"
+            data-keywords=""
+          >
+            <h3 class="text-lg font-semibold">Периоди на управление и почивка</h3>
+            <p class="text-sm text-gray-600">PDF файл, актуализация: 2024</p>
+            <div class="mt-3 flex gap-3">
+              <a
+                href="docs/driving_time.pdf"
+                target="_blank"
+                class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 text-center"
+              >Преглед</a>
+              <a
+                href="docs/driving_time.pdf"
+                download
+                class="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 text-center"
+              >Изтегли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer script and closing tags unchanged -->
+      <script>
+        (function() {
+          const searchInput = document.getElementById('doc-search');
+          const mainContent = document.querySelector('main');
+
+          let noResults = document.getElementById('no-results');
+          if (!noResults) {
+            noResults = document.createElement('div');
+            noResults.id = 'no-results';
+            noResults.className = 'text-center text-red-700 bg-red-100 border border-red-300 px-6 py-4 rounded mb-8 hidden';
+            noResults.textContent = 'Няма намерени документи.';
+            mainContent.parentNode.insertBefore(noResults, mainContent);
+          }
+
+          searchInput.addEventListener('input', function(e) {
+            const term = e.target.value.trim().toLowerCase();
+            let anyCardVisible = false;
+
+            document.querySelectorAll('.doc-card').forEach(card => {
+              const kws  = (card.getAttribute('data-keywords') || '').toLowerCase();
+              const text = card.textContent.toLowerCase();
+              const match = term === '' || kws.includes(term) || text.includes(term);
+              card.style.display = match ? '' : 'none';
+              if (match) anyCardVisible = true;
+            });
+
+            document.querySelectorAll('main section').forEach(section => {
+              const cards = section.querySelectorAll('.doc-card');
+              const sectionHasVisible = Array.from(cards).some(c => c.style.display !== 'none');
+              section.style.display = sectionHasVisible ? '' : 'none';
+            });
+
+            if (term !== '' && !anyCardVisible) {
+              noResults.classList.remove('hidden');
+            } else {
+              noResults.classList.add('hidden');
+            }
+          });
+        })();
+      </script>
+    </main>
+
+    <footer class="text-center text-sm text-gray-500 py-6">
+      © 2025 TachoDocs. Всички права запазени.
+    </footer>
+  </body>
+</html>
