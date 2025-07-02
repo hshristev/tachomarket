@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фактура към поръчка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            padding: 20px;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #999999;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 200px;
+        }
+        .invoice-details {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .invoice-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://demo.workshopreport.online/Logo-tachoamarket.png" alt="Tachoamarket Logo">
+        </div>
+        <div class="header">
+            Фактура към поръчка №' . $order_id . '
+        </div>
+        <div class="content">
+            <p>Здравейте,</p>
+            <p>Благодарим Ви за Вашата поръчка! Приложено ще намерите фактурата към поръчка с номер <strong>' . $order_id . '</strong>.</p>
+            <p>Моля, вижте прикачения файл за подробности или изтеглете фактурата, като кликнете върху бутона по-долу.</p>
+            
+            <a href="' . $download_link . '" class="button">Изтеглете фактурата</a>
+
+            <div class="invoice-details">
+                <p><strong>Поръчка №:</strong> ' . $order_id . '</p>
+                <p><strong>Дата на поръчката:</strong> ' . date('d.m.Y') . '</p>
+                <p><strong>Обща сума:</strong> %order_total%</p>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2024, TACHOAMARKET.BG. Всички права запазени.
+        </div>
+    </div>
+</body>
+</html>

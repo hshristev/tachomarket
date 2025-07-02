@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фактура за поръчка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            padding: 10px; /* Reduced padding */
+        }
+        .header {
+            background-color: #F58634;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 10px; /* Reduced padding */
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        .order-details {
+            box-sizing: border-box;
+            padding: 10px 20px; /* Reduced padding */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .order-details th,
+        .order-details td {
+            padding: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .support-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .support-text {
+            font-size: 12px;
+            color: #999999;
+            margin-right: 10px;
+        }
+
+        .support-section img {
+            max-width: 150px;
+            vertical-align: middle;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .download-link {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .download-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://demo.workshopreport.online/Logo-tachoamarket.png" alt="Tachoamarket Logo" style="max-width: 400px;">
+        </div>
+        <div class="header">
+            Поръчка с номер <strong>№ %order_id%</strong>
+        </div>
+        
+        <div class="content">
+            <p>Здравейте,</p>
+            <p>Приложено Ви изпращаме фактура към Вашата поръчка с номер <strong>№ %order_id%</strong>.</p>
+            <p>Можете да изтеглите фактурата, като кликнете на бутона по-долу.</p>
+        </div>
+
+        <div class="download-section">
+            <a href="%download_link%" class="download-link">Изтеглете фактурата</a>
+        </div>
+
+        <div class="support-section">
+            <span class="support-text">Тази платформа се поддържа от</span>
+            <img src="https://demo.workshopreport.online/Logo-28082024.png" alt="Tachos Logo">
+        </div>
+
+        <div class="footer">
+            &copy; 2024, ТАХОС ЕООД.
+        </div>
+    </div>
+</body>
+</html>

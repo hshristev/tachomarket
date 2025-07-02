@@ -1,0 +1,11 @@
+Options -MultiViews
+Options -Indexes
+
+RewriteEngine On
+# Uncomment and adjust the below if the code is not on the root level
+RewriteBase /path/to/your/project/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^$ index.php?page=myaccount [L]
