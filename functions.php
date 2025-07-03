@@ -41,7 +41,7 @@ echo '<!DOCTYPE html>
                     <a href="' . url('index.php') . '">Начало</a>
                     <a href="' . url('index.php?page=aboutus') . '">За нас</a>
 					<a href="' . url('index.php?page=myaccount') . '">Моят акаунт</a>
-                    <a href="' . url('tachodocs.php') . '">TachosDocs</a>
+                    <a href="' . url('tachodocs/tachodocs.html') . '">TachosDocs</a>
                     ' . $admin_link . '
                 </nav>
                 <div class="link-icons">

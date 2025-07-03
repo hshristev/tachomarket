@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TachoDocs – Новинарски блог</title>
+    <link rel="canonical" href="https://example.com/user_docs/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .doc-card {
+        transition: box-shadow 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+        border-radius: 1rem;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .doc-card:hover {
+        box-shadow: 0 6px 24px 0 rgba(8,66,140,0.12);
+        transform: translateY(-4px) scale(1.02);
+      }
+      .doc-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+      @media (min-width: 640px) {
+        .doc-card img {
+          height: 160px;
+        }
+      }
+      .doc-card-content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 1.25rem 1.25rem 0.75rem 1.25rem;
+      }
+      .doc-card h2 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem 0;
+        color: #08428c;
+      }
+      .doc-card p {
+        font-size: 0.95rem;
+        color: #6B7280;
+        margin-bottom: 1.25rem;
+      }
+      .doc-card a {
+        margin-top: auto;
+        padding: 0.5rem 1.25rem;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        background-color: #08428c;
+        color: #fff;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.2s;
+        box-shadow: 0 1px 4px 0 rgba(8,66,140,0.08);
+      }
+      .doc-card a:hover {
+        background-color: #073575;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-br from-sky-50 to-white min-h-screen text-gray-800">
+    <header class="bg-white py-4 shadow-md border-b border-gray-200">
+      <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+          <img src="../images/tachodocs_logo_2025.svg" alt="TachoDocs Logo" class="h-12 w-auto mx-auto sm:mx-0">
+          <span class="text-center sm:text-left text-xl sm:text-2xl font-semibold text-sky-900">Новинарски блог</span>
+        </div>
+        <button type="button" onclick="history.back()" class="inline-flex items-center px-4 py-2 bg-[#08428c] text-white text-sm font-medium rounded-lg shadow hover:bg-[#073575] focus:outline-none focus:ring-2 focus:ring-[#08428c]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Назад
+        </button>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 1">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 1</h2>
+            <p>3 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 2">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 2</h2>
+            <p>2 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+<div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="doc-card">
+          <img src="demo.avif" alt="News Image 3">
+          <div class="doc-card-content">
+            <h2>Заглавие на новината 3</h2>
+            <p>1 юли 2025</p>
+            <a href="#">
+              Прочети още
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

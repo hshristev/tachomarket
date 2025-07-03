@@ -129,7 +129,56 @@
         </div>
       </div>
     </section>
-    <!-- Tile 3 -->
+              <!-- Tile 3: News (Full-width, fits container) -->
+    <section class="space-y-4">
+      <!-- Section title -->
+      <h2 class="text-2xl font-semibold pl-4">News</h2>
+
+      <!-- Card container fills full width -->
+      <div class="info-tile w-full p-6 rounded-xl space-y-6">
+        <!-- Header Row: Recently Added + All News button -->
+        <div class="flex justify-between items-center">
+          <p class="text-gray-600 font-medium m-0">Recently Added</p>
+          <a href="news_blog/news.html" class="tile-btn">All News</a>
+        </div>
+
+        <!-- Cards: mobile = 1 column, md+ = 3 columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Card 1 -->
+          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow">
+            <a href="#" class="block font-semibold text-lg hover:underline">
+              Placeholder News Title 1
+            </a>
+            <time datetime="2025-07-02" class="text-sm text-gray-500 mt-2 block">
+              Jul 2, 2025
+            </time>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow">
+            <a href="#" class="block font-semibold text-lg hover:underline">
+              Placeholder News Title 2
+            </a>
+            <time datetime="2025-07-01" class="text-sm text-gray-500 mt-2 block">
+              Jul 1, 2025
+            </time>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow">
+            <a href="#" class="block font-semibold text-lg hover:underline">
+              Placeholder News Title 3
+            </a>
+            <time datetime="2025-06-30" class="text-sm text-gray-500 mt-2 block">
+              Jun 30, 2025
+            </time>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
   </main>
 
   <footer class="text-center text-gray-500 text-sm py-10">
