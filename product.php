@@ -203,7 +203,7 @@ if (isset($_GET['id'])) {
     exit('Product does not exist!');
 }
 ?>
-    <?=template_header($product['title'], $meta)?>4
+    <?=template_header($product['title'], $meta)?>
 
 <?php if ($error): ?>
 

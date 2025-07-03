@@ -199,17 +199,16 @@ function template_admin_header($title, $selected = 'orders', $selected_child = '
             </span>
             <span class="txt">Settings</span>
         </a>
-        <a href="index.php?page=code_generator"' . ($selected == 'code_generator' ? ' class="selected"' : '') . ' title="Code_generator">
-            
+        <a href="index.php?page=blog"' . ($selected == 'blog' ? ' class="selected"' : '') . ' title="Code_generator">
+        <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="15" height="15">
+    <!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Fonticons, Inc.) -->
+    <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160L256 0H64zm208 32V160h112L272 32zM96 232c0-13.3 10.7-24 24-24h144c13.3 0 24 10.7 24 24s-10.7 24-24 24H120c-13.3 0-24-10.7-24-24zm0 80c0-13.3 10.7-24 24-24h144c13.3 0 24 10.7 24 24s-10.7 24-24 24H120c-13.3 0-24-10.7-24-24zm0 80c0-13.3 10.7-24 24-24h80c13.3 0 24 10.7 24 24s-10.7 24-24 24H120c-13.3 0-24-10.7-24-24z"/>
+</svg>
+</span>
 
-    <span class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="15" height="15">
-            <!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Fonticons, Inc.) -->
-            <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
-        </svg>
-    </span>
-    <span class="txt">Code Generator</span>
-</a>
+        <span class="txt">Blog</span>
+        </a>
 
 
     ';
