@@ -14,11 +14,11 @@ if (isset($_POST['create_blog'])) {
     $content = trim($_POST['content'] ?? '');
     $media_id = trim($_POST['media_id'] ?? '');
     $is_published = isset($_POST['is_published']) ? 1 : 0;
-    $created_at = date('Y-m-d H:i:s', strtotime(str_replace('.', '-', $_POST['created_at'])));
+    $created_at = date('Y-m-d', strtotime(str_replace('.', '-', $_POST['created_at'])));
 
     if ($title && $slug && $content) {
-        $stmt = $pdo->prepare("INSERT INTO blog (title, slug, content, image, is_published, created_at) VALUES (?, ?, ?, ?, ?, ?)");
-        if ($stmt->execute([$title, $slug, $content, $media_id, $is_published, $created_at])) {
+        $stmt = $pdo->prepare("INSERT INTO blog (title, slug, content, image, is_published, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        if ($stmt->execute([$title, $slug, $content, $media_id, $is_published, $created_at, ''])) {
             $success_msgs[] = "Blog post created successfully.";
         } else {
             $error_msgs[] = "Database error.";
@@ -66,9 +66,19 @@ $error_msg = implode('<br>', $error_msgs);
 <div class="content-title">
     <div class="title">
         <h2>Create Blog Post</h2>
-        <p>Fill out the form to create a new blog post.</p>
     </div>
 </div>
+
+<div class="content-header flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-6">
+    <a href="index.php?page=blog" class="btn inline-flex items-center gap-2 bg-[#08428c] text-white px-4 py-2 rounded-md hover:bg-[#06306b] transition">
+        <svg class="icon-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Назад
+    </a>
+</div>
+
+
 
 <?php if (!empty($success_msg)): ?>
     <div class="msg success"><?= $success_msg ?></div>
@@ -96,7 +106,6 @@ $error_msg = implode('<br>', $error_msgs);
             <p class="no-images-msg">No image selected.</p>
         </div>
 
-        <button type="button" onclick="openMediaModal()" class="btn mar-bot-2 mar-top-2">Choose Media</button>
 
         <input type="hidden" name="media_id" id="media_id" value="">
     </div>

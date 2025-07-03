@@ -27,7 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = trim($_POST['content'] ?? '');
     $media_id = trim($_POST['media_id'] ?? '');
     $is_published = isset($_POST['is_published']) ? 1 : 0;
-    $created_at = trim($_POST['created_at'] ?? $blog['created_at']);
+    $created_at_input = trim($_POST['created_at'] ?? '');
+if (!empty($created_at_input)) {
+    $created_at_timestamp = strtotime(str_replace('.', '-', $created_at_input));
+    $created_at = date('Y-m-d H:i:s', $created_at_timestamp);
+} else {
+    $created_at = $blog['created_at'];
+}
+
     $updated_at = date('Y-m-d H:i:s');
 
     if ($title && $slug && $content) {
@@ -81,7 +88,7 @@ $image_value = htmlspecialchars($blog['image'] ?? '');
             <?php endif; ?>
         </div>
 
-        <button type="button" onclick="openMediaModal()" class="btn mar-bot-2 mar-top-2">Choose Media</button>
+        
 
         <input type="hidden" name="media_id" id="media_id" value="<?= $image_value ?>">
     </div>
@@ -92,7 +99,8 @@ $image_value = htmlspecialchars($blog['image'] ?? '');
     </label>
 
     <label>Created At:</label>
-    <input type="text" name="created_at" value="<?= $created_at_value ?>" placeholder="<?= date('Y-m-d H:i:s') ?>">
+<input type="text" name="created_at" value="<?= date('d.m.Y', strtotime($blog['created_at'])) ?>" placeholder="дд.мм.гггг">
+
 
     <input type="submit" value="Save Changes" class="btn">
 </form>
