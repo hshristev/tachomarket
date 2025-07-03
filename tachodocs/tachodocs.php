@@ -1,3 +1,16 @@
+<?php
+//  filepath: c:\xampp\htdocs\tachomarket\tachomarket\tachodocs\tachodocs.php  -->
+// <?php
+define('shoppingcart', true);
+include '../config.php';
+include '../functions.php';
+$pdo = pdo_connect_mysql();
+
+// Fetch the 3 most recent news posts (with slug and created_at)
+$stmt = $pdo->prepare("SELECT title, slug, created_at FROM blog WHERE is_published = 1 ORDER BY created_at DESC LIMIT 3");
+$stmt->execute();
+$recent_news = $stmt->fetchAll();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,29 +45,18 @@
       background-color: #f5f7fa;
     }
   </style>
-  <script>
-    function updateHeader(subtitle) {
-      document.getElementById('main-subtitle').textContent = subtitle;
-    }
-  </script>
 </head>
 <body class="bg-white text-gray-800">
 <header class="bg-white py-6 shadow-md border-b border-gray-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-    
-    <!-- Logo and Title: stacked on mobile, side-by-side on desktop -->
     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
       <img src="images/tachodocs_logo_2025.svg" alt="TachoDocs Logo" class="h-12 w-auto mx-auto sm:mx-0">
-      
     </div>
-
-    <!-- Go Back Button -->
     <button
       type="button"
       onclick="history.back()"
       class="inline-flex items-center px-4 py-2 bg-[#08428c] text-white text-sm font-medium rounded-lg shadow hover:bg-[#073575] focus:outline-none focus:ring-2 focus:ring-[#08428c]"
     >
-      <!-- Heroicon: Arrow Left -->
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
@@ -62,7 +64,6 @@
     </button>
   </div>
 </header>
-
 
   <main class="max-w-7xl mx-auto px-6 py-16 space-y-20">
     <!-- Tile 1 -->
@@ -155,40 +156,25 @@
         <!-- Header Row: Recently Added + All News button -->
         <div class="flex justify-between items-center">
           <p class="text-gray-600 font-medium m-0">Recently Added</p>
-          <a href="news_blog/news.html" class="tile-btn">All News</a>
+          <a href="news_blog/news.php" class="tile-btn">All News</a>
         </div>
 
         <!-- Cards: mobile = 1 column, md+ = 3 columns -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <!-- Card 1 -->
-          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow">
-            <a href="#" class="block font-semibold text-lg hover:underline">
-              Placeholder News Title 1
-            </a>
-            <time datetime="2025-07-02" class="text-sm text-gray-500 mt-2 block">
-              Jul 2, 2025
-            </time>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow">
-            <a href="#" class="block font-semibold text-lg hover:underline">
-              Placeholder News Title 2
-            </a>
-            <time datetime="2025-07-01" class="text-sm text-gray-500 mt-2 block">
-              Jul 1, 2025
-            </time>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow">
-            <a href="#" class="block font-semibold text-lg hover:underline">
-              Placeholder News Title 3
-            </a>
-            <time datetime="2025-06-30" class="text-sm text-gray-500 mt-2 block">
-              Jun 30, 2025
-            </time>
-          </div>
+          <?php if ($recent_news): ?>
+            <?php foreach ($recent_news as $news): ?>
+              <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-shadow">
+                <a href="news_blog/news.php?slug=<?= urlencode($news['slug']) ?>" class="block font-semibold text-lg hover:underline">
+                  <?= htmlspecialchars($news['title']) ?>
+                </a>
+                <time datetime="<?= htmlspecialchars($news['created_at']) ?>" class="text-sm text-gray-500 mt-2 block">
+                  <?= date('M j, Y', strtotime($news['created_at'])) ?>
+                </time>
+              </div>
+            <?php endforeach; ?>
+          <?php else: ?>
+            <div class="col-span-3 text-center text-gray-500 py-8">No news yet.</div>
+          <?php endif; ?>
         </div>
       </div>
     </section>
